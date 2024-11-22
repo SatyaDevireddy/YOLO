@@ -49,14 +49,15 @@ class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs
     override fun draw(canvas: Canvas) {
         super.draw(canvas)
 
-        results.forEach {
+        results.filter{it.cnf>0.5}.forEach {
             val left = it.x1 * width
             val top = it.y1 * height
             val right = it.x2 * width
             val bottom = it.y2 * height
 
             canvas.drawRect(left, top, right, bottom, boxPaint)
-            val drawableText = it.clsName
+            //val drawableText = it.clsName +" "+ it.cnf.toString()
+            val drawableText = "${it.clsName} ${String.format("%.2f", it.cnf)}"
 
             textBackgroundPaint.getTextBounds(drawableText, 0, drawableText.length, bounds)
             val textWidth = bounds.width()

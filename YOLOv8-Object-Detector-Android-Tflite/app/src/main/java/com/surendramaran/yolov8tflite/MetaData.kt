@@ -8,7 +8,7 @@ import java.io.InputStream
 import java.io.InputStreamReader
 import java.nio.MappedByteBuffer
 
-object MetaData {
+object  MetaData {
 
     fun extractNamesFromMetadata(model: MappedByteBuffer): List<String> {
         try {

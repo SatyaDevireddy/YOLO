@@ -1,9 +1,10 @@
-plugins {
+
+ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
 
-android {
+ android {
     namespace = "yolov8tflite"
     compileSdk = 34
 

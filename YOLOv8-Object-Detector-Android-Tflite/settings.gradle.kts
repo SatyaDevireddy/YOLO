@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "YOLOv8 TfLite"
+rootProject.name = "Beneath The Waves"
 include(":app")
