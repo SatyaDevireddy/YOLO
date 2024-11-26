@@ -48,7 +48,7 @@ class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs
 
     override fun draw(canvas: Canvas) {
         super.draw(canvas)
-
+        
         results.filter{it.cnf>0.5}.forEach {
             val left = it.x1 * width
             val top = it.y1 * height
